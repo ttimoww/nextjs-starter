@@ -1,13 +1,16 @@
-import { User } from '@prisma/client';
 import prisma from '@/lib/prisma';
 
 export class UserService {
 	/**
 	 * Gets all users
-	 * @returns All users
+	 * @returns All users with their pets
 	 */
-	public static getUsers(): Promise<User[]> {
-		return prisma.user.findMany();
+	public static getUsers() {
+		return prisma.user.findMany({
+			include: {
+				pets: true
+			}
+		});
 	}
 
 	/**
@@ -15,7 +18,7 @@ export class UserService {
 	 * @param name The name of the user to create
 	 * @returns The created user
 	 */
-	public static async createUser(name: string): Promise<User> {
+	public static async createUser(name: string) {
 		const user = await prisma.user.create({
 			data: {
 				name

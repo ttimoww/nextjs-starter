@@ -13,12 +13,12 @@ datasource db {
 model Pet {
     id      Int      @id @default(autoincrement())
     name    String
-    user    User     @relation(fields: [userId], references: [id])
+    user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
     userId  Int
 }
 
 model User {
   id      Int      @id @default(autoincrement())
   name    String
-  pet   Pet[]
+  pets   Pet[]
 }

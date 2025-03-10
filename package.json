@@ -1,0 +1,37 @@
+{
+	"name": "nextjs-starter",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"lint:check": "next lint",
+		"lint:fix": "next lint --fix",
+		"prettier:check": "prettier --check .",
+		"prettier:fix": "prettier --write ."
+	},
+	"dependencies": {
+		"next": "15.2.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.2.1",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-unused-imports": "^4.1.4",
+		"prettier": "^3.5.3",
+		"prettier-plugin-embed": "^0.5.0",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	},
+	"packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
+}

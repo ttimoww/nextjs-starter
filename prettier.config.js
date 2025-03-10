@@ -14,16 +14,23 @@ module.exports = {
 		'^(react/(.*)$)|^(react$)',
 		'^(next/(.*)$)|^(next$)',
 		'<THIRD_PARTY_MODULES>',
-		'^@/lib/gql(.*)$',
-		'^@/types/(.*)$',
-		'^@/config/(.*)$',
+		'',
+		'^@/actions/(.*)$',
+		'',
 		'^@/lib/(.*)$',
+		'',
+		'^@/services(.*)$',
+		'',
 		'^@/hooks/(.*)$',
+		'',
+		'^@/components/ui/(.*)$',
+		'',
 		'^@/components/(.*)$',
+		'',
 		'^@/styles/(.*)$',
-		'^@/app/(.*)$',
+		'',
 		'^[./]'
 	],
 	importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
-	plugins: ['@ianvs/prettier-plugin-sort-imports']
+	plugins: ['prettier-plugin-embed', '@ianvs/prettier-plugin-sort-imports']
 };
